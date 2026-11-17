@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h2>User Registration</h2>
+<form onsubmit="return validateRegistration()">
+<label>Full Name</label>
+<input type="text" id="fullname"
+placeholder="Enter Full Name" required>
+<label>Email</label>
+<input type="email" id="email"
+placeholder="Enter Email" required>
+<label>Mobile Number</label>
+<input type="tel" id="mobile"
+placeholder="Enter Mobile Number"
+pattern="[0-9]{10}" required>
+<label>Username</label>
+<input type="text" id="regusername"
+placeholder="Create Username" required>
+<label>Password</label>
+<input type="password" id="regpassword"
+placeholder="Create Password" required>
+<label>Confirm Password</label>
+<input type="password" id="confirmpassword"
+placeholder="Confirm Password" required>
+<label>Enter CAPTCHA</label>
+<div class="captcha-box">
+<span id="captcha"></span>
+<button type="button" onclick="generateCaptcha()">↻</button>
+</div>
+<input type="text" id="captchaInput"
+placeholder="Enter CAPTCHA" required>
+<button type="submit" class="btn">
+Register
+</button>
+<p>Already Registered?
+<a href="login.html">Login Here</a>
+</p>
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
